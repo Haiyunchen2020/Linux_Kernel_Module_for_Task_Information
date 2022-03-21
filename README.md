@@ -1,8 +1,6 @@
 # Linux_Kernel_Module_for_Task_Information
 
-In this project, you will write a Linux kernel module that uses the /proc file system for displaying a task’s information based on its process identifier value pid. Before beginning this project, be sure you have completed the Linux kernel module programming project in Chapter 2, which involves creating an entry in the /proc file system. This project will involve writing a process identifier to
- 
-the file /proc/pid. Once a pid has been written to the /proc file, subsequent reads from /proc/pid will report (1) the command the task is running, (2) the value of the task’s pid, and (3) the current state of the task. An example of how your kernel module will be accessed once loaded into the system is as follows:
+In this project, you will write a Linux kernel module that uses the /proc file system for displaying a task’s information based on its process identifier value pid. This project will involve writing a process identifier to the file /proc/pid. Once a pid has been written to the /proc file, subsequent reads from /proc/pid will report (1) the command the task is running, (2) the value of the task’s pid, and (3) the current state of the task. An example of how your kernel module will be accessed once loaded into the system is as follows:
    echo "1395" > /proc/pid
    cat /proc/pid
    command = [bash] pid = [1395] state = [1]
