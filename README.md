@@ -4,4 +4,4 @@ In this project, you will write a Linux kernel module that uses the /proc file s
    echo "1395" > /proc/pid
    cat /proc/pid
    command = [bash] pid = [1395] state = [1]
-The echo command writes the characters "1395" to the /proc/pid file. Your kernel module will read this value and store its integer equivalent as it rep- resents a process identifier. The cat command reads from /proc/pid, where your kernel module will retrieve the three fields from the task struct associ- ated with the task whose pid value is 1395.
+The echo command writes the characters "1395" to the /proc/pid file. Your kernel module will read this value and store its integer equivalent as it represents a process identifier. The cat command reads from /proc/pid, where your kernel module will retrieve the three fields from the task struct associated with the task whose pid value is 1395.
