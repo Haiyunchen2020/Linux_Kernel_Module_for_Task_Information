@@ -1,8 +1,7 @@
-//procwr2-It works
 /**
  * Kernel module that communicates with /proc file system.
  *
- * This provides the base logic for Project 2 - displaying task information
+ * This provides the base logic for this Project - displaying task information
  */
 
 #include <linux/init.h>
@@ -12,7 +11,7 @@
 #include <linux/kernel.h>
 #include <linux/proc_fs.h>
 #include <linux/vmalloc.h>
-#include <linux/uaccess.h>   /* not #include <asm/uaccess.h> */
+#include <linux/uaccess.h>  
 
 #define BUFFER_SIZE 128
 #define PROC_NAME "pid"
