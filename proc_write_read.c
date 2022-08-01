@@ -68,14 +68,6 @@ static ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, 
                 completed = 0;
                 return 0;
         }
-        /*
-        if (pid_task(find_vpid(l_pid),PIDTYPE_PID)!=NULL){
-          	tsk=pid_task(find_vpid(l_pid),PIDTYPE_PID);
-          }
-          else {
-          	printk(KERN_INFO "Error finding pid\n");
-          	return 0;
-          } */
         
         tsk = pid_task(find_vpid(l_pid), PIDTYPE_PID);
         
@@ -117,7 +109,6 @@ static ssize_t proc_write(struct file *file, const char __user *usr_buf, size_t 
 	 * sscanf() must be used instead.
 	 */
 
-        //char buffer[BUFFER_SIZE];
         sscanf(k_mem,"%s",buffer);
         kstrtol(buffer,10,&l_pid);
       
